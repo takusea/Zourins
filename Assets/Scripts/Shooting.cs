@@ -7,18 +7,21 @@ public class Shooting : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            ShootBall();
+            ShootBall(transform.right * -1);
+        }
+        else if(Input.GetKeyDown(KeyCode.K))
+        {
+            ShootBall(transform.right);
         }
     }
 
-    private void ShootBall()
+    private void ShootBall(Vector2 shootDirection)
     {
         GameObject ball = Instantiate(ballPrefab, transform.position, Quaternion.identity);
         Rigidbody2D ballRb = ball.GetComponent<Rigidbody2D>();
 
-        Vector2 shootDirection = transform.up;
         ballRb.AddForce(shootDirection * shootForce, ForceMode2D.Impulse);
     }
 }
