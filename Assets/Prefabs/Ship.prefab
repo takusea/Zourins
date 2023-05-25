@@ -121,7 +121,7 @@ MonoBehaviour:
   maxSpeed: 20
   stunDuration: 3
   invincibleDuration: 2
-  blinkInterval: 0.2
+  blinkInterval: 0.05
 --- !u!50 &3283360741432944808
 Rigidbody2D:
   serializedVersion: 4
