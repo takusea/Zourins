@@ -144,4 +144,18 @@ public class ShipController : MonoBehaviour
         // 速度を返す処理を実装
         // 例えば、Rigidbody2Dの速度を返すなどの方法があります
     }
+
+    public void StopMovement()
+    {
+        isStunned = true;
+        // プレイヤーの移動を停止する処理を実装
+        // 例えば、速度をゼロに設定するか、移動に関連する入力を無効化するなどの方法があります
+    }
+
+    public void ResumeMovement()
+    {
+        isStunned = false;
+        // プレイヤーの移動を再開する処理を実装
+        // 例えば、速度を元の値に設定するか、移動に関連する入力を有効化するなどの方法があります
+    }
 }
