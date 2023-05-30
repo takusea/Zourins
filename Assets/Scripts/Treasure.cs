@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Treasure : MonoBehaviour
 {
-    public GameObject itemPrefab; // アイテムのプレハブ
+    public ItemSpawner itemSpawner; // アイテムのプレハブ
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,11 +11,7 @@ public class Treasure : MonoBehaviour
             ItemStore player = collision.GetComponent<ItemStore>();
             if (player != null)
             {
-               
-
-                // アイテムを生成してプレイヤーに追加する処理
-                GameObject itemObject = Instantiate(itemPrefab, player.transform.position, Quaternion.identity);
-                Item item = itemObject.GetComponent<Item>();
+                Item item = itemSpawner.SpawnRandomItem();
                 player.AddItem(item);
 
                 Destroy(gameObject); // 宝箱を破壊する
