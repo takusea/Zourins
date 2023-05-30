@@ -2,16 +2,24 @@ using UnityEngine;
 
 public class Treasure : MonoBehaviour
 {
+    public GameObject itemPrefab; // アイテムのプレハブ
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Treasure"))
+        if (collision.CompareTag("Player"))
         {
-            Destroy(collision.gameObject); // 宝箱を破壊する
+            ItemStore player = collision.GetComponent<ItemStore>();
+            if (player != null)
+            {
+               
 
-            // アイテムを生成する処理を記述
-            // 例えば、Instantiate()を使用してアイテムを生成するなど
-            // 生成したアイテムを船の所持アイテムリストに追加するなどの処理を行います
+                // アイテムを生成してプレイヤーに追加する処理
+                GameObject itemObject = Instantiate(itemPrefab, player.transform.position, Quaternion.identity);
+                Item item = itemObject.GetComponent<Item>();
+                player.AddItem(item);
+
+                Destroy(gameObject); // 宝箱を破壊する
+            }
         }
     }
 }
-
