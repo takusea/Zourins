@@ -7,9 +7,8 @@ public class SakeItem : Item
 
     private ShipController player; // 酒の効果を受けるプレイヤー
 
-    public void SetPlayer(ShipController player)
-    {
-        this.player = player;
+    void Start() {
+        player = GameObject.Find("Ship").GetComponent<ShipController>();
     }
 
     public override void Use()

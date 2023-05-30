@@ -91,19 +91,6 @@ public class ShipController : MonoBehaviour
                 blinkTimer = 0f;
             }
         }
-
-        if (isSlowed)
-        {
-            // 遅くなっている残り時間を更新
-            slowdownTimer -= Time.fixedDeltaTime;
-
-            // 遅くなっている残り時間が0以下になった場合、遅くなる効果を解除
-            if (slowdownTimer <= 0f)
-            {
-                isSlowed = false;
-                SetPlayerSpeed(speed); // 通常の速度に戻す
-            }
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -146,14 +133,14 @@ public class ShipController : MonoBehaviour
 
     private void SetPlayerSpeed(float newSpeed)
     {
-        maxSpeed = newSpeed;
+        speed = newSpeed;
         // 速度に関連する処理を実装
         // 例えば、速度を直接変更するか、Rigidbody2Dの速度を更新するなどの方法があります
     }
 
     private float GetPlayerSpeed()
     {
-        return maxSpeed;
+        return speed;
         // 速度を返す処理を実装
         // 例えば、Rigidbody2Dの速度を返すなどの方法があります
     }
