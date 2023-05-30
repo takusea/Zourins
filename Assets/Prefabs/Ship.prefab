@@ -10,15 +10,16 @@ GameObject:
   m_Component:
   - component: {fileID: 3283360741432944823}
   - component: {fileID: 3283360741432944822}
-  - component: {fileID: 3283360741432944820}
-  - component: {fileID: 3283360741432944809}
   - component: {fileID: 3283360741432944808}
   - component: {fileID: 3283360741432944821}
-  - component: {fileID: 3283360741432944818}
   - component: {fileID: 3283360741432944819}
+  - component: {fileID: 3283360741432944820}
+  - component: {fileID: 3283360741432944809}
+  - component: {fileID: 1974658188}
+  - component: {fileID: 1974658189}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,38 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3283360741432944820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3283360741432944811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18aac59752ee641438d941f7112b8e91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 2025929698400608471, guid: 4181628d3a14046deb24dda74ef2493c, type: 3}
-  shootForce: 10
---- !u!114 &3283360741432944809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3283360741432944811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd4a6bd96e5a04700833a8294428a148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  rotationSpeed: 100
-  maxSpeed: 20
-  stunDuration: 3
-  invincibleDuration: 2
-  blinkInterval: 0.05
 --- !u!50 &3283360741432944808
 Rigidbody2D:
   serializedVersion: 4
@@ -159,18 +128,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3283360741432944818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3283360741432944811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b23895e45b943415cba69281be8be0ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &3283360741432944819
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -187,3 +144,60 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.86
+--- !u!114 &3283360741432944820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283360741432944811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18aac59752ee641438d941f7112b8e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballPrefab: {fileID: 2025929698400608471, guid: 4181628d3a14046deb24dda74ef2493c, type: 3}
+  shootForce: 10
+--- !u!114 &3283360741432944809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283360741432944811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4a6bd96e5a04700833a8294428a148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  rotationSpeed: 100
+  maxSpeed: 20
+  stunDuration: 3
+  invincibleDuration: 2
+  blinkInterval: 0.05
+--- !u!114 &1974658188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283360741432944811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be069399b9a524f29872bc2f6f32a25d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1974658189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283360741432944811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd68e419d34704b83bbd4c9aef3c3028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1974658188}
