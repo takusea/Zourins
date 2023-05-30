@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a62134c8daed482ea345321ff4ae04e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: b8cccee52ce3b48a6835185197749935, type: 3}
   trapDuration: 10

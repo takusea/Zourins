@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800ade269b52640f89d24812c99136ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 1c57b542ea16b4d47bf4520868253285, type: 3}
   slowdownDuration: 5
   slowdownFactor: 0.5

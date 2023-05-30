@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class NetItem : Item
 {
+    public Sprite sprite;
+
     public float trapDuration = 10f; // 罠の効果が続く時間
 
     public override void Use()
@@ -10,6 +12,11 @@ public class NetItem : Item
         // 相手を一定時間停止させる罠を設置する処理
         // ここでは、相手プレイヤーの移動を無効化する例を示します
         StartCoroutine(ActivateTrapCoroutine());
+    }
+
+    public override Sprite GetItemImage()
+    {
+        return sprite;
     }
 
     private IEnumerator ActivateTrapCoroutine()
