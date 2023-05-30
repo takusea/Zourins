@@ -124,6 +124,7 @@ MonoBehaviour:
   stunDuration: 3
   invincibleDuration: 2
   blinkInterval: 0.05
+  spriteRenderer: {fileID: 4991143539502436895}
 --- !u!114 &1974658188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be069399b9a524f29872bc2f6f32a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemUI: {fileID: 0}
 --- !u!114 &1974658189
 MonoBehaviour:
   m_ObjectHideFlags: 0

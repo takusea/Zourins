@@ -11,7 +11,7 @@ public class ShipController : MonoBehaviour
     public float blinkInterval = 0.2f; // 点滅の間隔
 
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     private bool isStunned = false; // 船がスタン状態かどうか
     private float stunTimer = 0f; // スタン状態の経過時間
     private bool isInvincible = false; // 船が無敵状態かどうか
@@ -26,7 +26,6 @@ public class ShipController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
