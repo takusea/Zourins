@@ -9,12 +9,13 @@ public class SakeItem : Item
 
     private ShipController player; // 酒の効果を受けるプレイヤー
 
-     public override Sprite GetItemImage()
+    public override Sprite GetItemImage()
     {
         return sprite;
     }
 
-    void Start() {
+    void Start()
+    {
         player = GameObject.Find("Ship").GetComponent<ShipController>();
     }
 
@@ -22,7 +23,7 @@ public class SakeItem : Item
     {
         if (player != null)
         {
-            player.ApplySlowdown(slowdownDuration, slowdownFactor);
+            StartCoroutine(player.Slowdown(slowdownDuration, slowdownFactor));
         }
     }
 }

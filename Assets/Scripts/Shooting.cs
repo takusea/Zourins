@@ -5,19 +5,7 @@ public class Shooting : MonoBehaviour
     public GameObject ballPrefab; // 球のプレハブ
     public float shootForce = 10f; // 球を飛ばす力
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            ShootBall(transform.right * -1);
-        }
-        else if(Input.GetKeyDown(KeyCode.K))
-        {
-            ShootBall(transform.right);
-        }
-    }
-
-    private void ShootBall(Vector2 shootDirection)
+    public void ShootBall(Vector2 shootDirection)
     {
         GameObject ball = Instantiate(ballPrefab, transform.position, Quaternion.identity);
         Rigidbody2D ballRb = ball.GetComponent<Rigidbody2D>();
